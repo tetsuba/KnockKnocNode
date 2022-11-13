@@ -1,0 +1,30 @@
+{
+  "name": "knockknocknode",
+  "version": "1.0.0",
+  "description": "Knock Knock. Who's there. Node. Node who. Node \"*\"",
+  "main": "index.js",
+  "engines": {
+    "node": "16.17.1",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tetsuba/KnockKnockNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tetsuba/KnockKnockNode/issues"
+  },
+  "homepage": "https://github.com/tetsuba/KnockKnockNode#readme",
+  "dependencies": {
+    "semver": "^7.3.8"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
