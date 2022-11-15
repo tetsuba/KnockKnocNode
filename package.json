@@ -4,7 +4,7 @@
   "description": "Knock Knock. Who's there. Node. Node who. Node \"*\"",
   "main": "index.js",
   "engines": {
-    "node": "16.17.1",
+    "node": "^16.17.1",
     "npm": "*"
   },
   "scripts": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/tetsuba/KnockKnockNode.git"
   },
-  "author": "",
+  "author": "Tetsuba",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tetsuba/KnockKnockNode/issues"

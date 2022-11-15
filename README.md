@@ -1,11 +1,11 @@
 # KnockKnockNode
 
 Checks which node version is running and compares it with the node version
-documented in the package.json. 
+documented in the package.json. If the versions matches, then the app will continue
+to install or run. If not, it will try to switch or install the correct version 
+using n.
 
-If the versions match then the app will continue.
-
-If not then a series of checks will be done and then install the correct version 
+This package it dependent on [ n ](https://github.com/tj/n) to be installed.
 
 ---
 ### Dependencies 
@@ -16,8 +16,11 @@ link [https://github.com/tj/n](https://github.com/tj/n)
 ## Example
 
 ---
-#### Node Script
+#### package.json
 ```
+  "engines": {
+    "node": ">=16.17.1"
+  },
   "scripts": {
     "preinstall": "node knockKnockNode",
     "prestart": "node knockKnockNode",
@@ -25,16 +28,9 @@ link [https://github.com/tj/n](https://github.com/tj/n)
   },
 ```
 
-#### Shell Script
-```
-  "scripts": {
-    "preinstall": "./knockKnockNode.sh",
-    "prestart": "./knockKnockNode.sh",
-    "start": "node index"
-  },
-```
 
-
+---
+## Required steps 
 The n command downloads and installs to /usr/local by default, but you may override this location by defining N_PREFIX. n caches Node.js versions in subdirectory n/versions. The active Node.js version is installed in subdirectories bin, include, lib, and share.
 
 To avoid requiring sudo for n and npm global installs, it is suggested you either install to your home directory using N_PREFIX, or take ownership of the system directories:
@@ -45,11 +41,9 @@ sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/lo
 ```
 [https://www.npmjs.com/package/n](https://www.npmjs.com/package/n)
 
-
-https://blog.greenkeeper.io/introduction-to-version-ranges-e0e8c6c85f0f
-
 ---
+## Semantic for node
+Read the documentation to understand the version ranges that can be used.
 
-### Future implementations
- - Look to implement other node package mangers
- - Version look-ups 
+[www.npmjs.com/package/semver](https://www.npmjs.com/package/semver)
+
