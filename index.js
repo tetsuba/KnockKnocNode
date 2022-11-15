@@ -5,7 +5,7 @@ const semver = require('semver');
 const { exec } = require("child_process");
 const print = require('./lib/print');
 const { externalPackage, combine } = require('./lib/utils')
-const { compareProcessNodeWith } = require('./lib/external')
+const { compareProcessNodeWith } = require('./lib/compareVersions')
 
 const nodeVersion = compareProcessNodeWith('package.json', ['engines', 'node'])
 
