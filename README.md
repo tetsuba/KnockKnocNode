@@ -22,8 +22,8 @@ link [https://github.com/tj/n](https://github.com/tj/n)
     "node": ">=16.17.1"
   },
   "scripts": {
-    "preinstall": "node knockKnockNode",
-    "prestart": "node knockKnockNode",
+    "preinstall": "knockKnockNode",
+    "prestart": "knockKnockNode",
     "start": "node index"
   },
 ```
